@@ -1,5 +1,5 @@
 {
-  "name": "electron-quick-start",
+  "name": "cbitez",
   "version": "1.0.0",
   "description": "A minimal Electron application",
   "main": "main.js",
@@ -17,6 +17,16 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-packager": "^12.1.0",
+    "electron-rebuild": "^1.7.3"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^1.0.5",
+    "bootstrap": "^4.1.1",
+    "chart.js": "^2.7.2",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "serialport": "^6.2.0"
   }
 }

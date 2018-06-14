@@ -1,19 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+<head>
+  <meta charset="UTF-8">
+  <title>CBITEZ | Drone Propeller Test Systems</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/panel.css">
+</head>
+<body>
+<div class="container">
+  <div class="row justify-content-center">
+    <select name="comport">
 
-    <script>
-      // You can also require other files to run in this process
-      require('./renderer.js')
-    </script>
-  </body>
+    </select>
+    <button id="startBtn" data-started="false" class="btn btn-primary mt-50">Start Test</button>
+    <button id="clearGraph" class="btn btn-warning mt-50" style="margin-left:16px">Clear All Graph</button>
+    <button id="ksIncreaser" class="btn btn-secondary">Increase Propeller Number</button>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col">
+      <h2 class="text-center">RPM</h2>
+      <p id="rpm" class="text-center"></p>
+    </div>
+    <div class="col">
+      <h2 class="text-center">Current</h2>
+      <p id="amper" class="text-center"></p>
+    </div>
+    <div class="col">
+      <h2 class="text-center">Voltage</h2>
+      <p id="volt" class="text-center"></p>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-50">
+    <div class="col">
+      <h2 class="text-center">Watt</h2>
+      <p id="watt" class="text-center"></p>
+    </div>
+    <div class="col">
+      <h2 class="text-center">Mechanical Power</h2>
+      <p id="mechanic" class="text-center"></p>
+    </div>
+    <div class="col">
+      <h2 class="text-center">Electrical Efficency</h2>
+      <p id="efficency" class="text-center"></p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center mt-50">
+    <div class="col-md-6">
+      <canvas id="firstChart"></canvas>
+    </div>
+    <div class="col-md-6">
+      <canvas id="secondChart"></canvas>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-50">
+    <div class="col-md-6">
+      <canvas id="thirdChart"></canvas>
+    </div>
+    <div class="col-md-6">
+      <canvas id="fourthChart"></canvas>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-50">
+    <div class="col">
+      <canvas id="fifthChart"></canvas>
+    </div>
+  </div>
+</div>
+<script>
+    // You can also require other files to run in this process
+
+    require('jquery');
+    require('popper.js');
+    require('bootstrap');
+    require('chart.js');
+    require('./renderer.js')
+</script>
+</body>
 </html>
