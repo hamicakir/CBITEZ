@@ -24,7 +24,7 @@
   "dependencies": {
     "@serialport/parser-readline": "^1.0.5",
     "bootstrap": "^4.1.1",
-    "chart.js": "^2.7.2",
+    "chart.js": "^2.9.4",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "serialport": "^6.2.0"
